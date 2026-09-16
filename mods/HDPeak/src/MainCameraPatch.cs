@@ -18,14 +18,14 @@ namespace HDPeak.Patches {
             UpdateCameraFarClipPlane(__instance);
         }
 
-        [HarmonyPatch(typeof(MainCamera), "LateUpdate")]
-        [HarmonyPostfix]
-        public static void LateUpdate(MainCamera __instance)
-        {
-            if (needsUpdate) {
-                UpdateCameraFarClipPlane(__instance);
-            }
-        }
+        //[HarmonyPatch(typeof(MainCamera), "LateUpdate")]
+        //[HarmonyPostfix]
+        //public static void LateUpdate(MainCamera __instance)
+        //{
+        //    if (needsUpdate) {
+        //        UpdateCameraFarClipPlane(__instance);
+        //    }
+        //}
 
         private static void UpdateCameraFarClipPlane(MainCamera instance)
         {
